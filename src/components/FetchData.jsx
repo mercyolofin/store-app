@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Products from "./Products";
-
+import CheckMore from "./CheckMore";
 const url = "https://dummyjson.com/products?limit=80";
 const FetchData = () => {
   const [load, setLoad] = useState(false);
@@ -25,10 +25,13 @@ const FetchData = () => {
         <div style={{ margin: "auto", width: "100%" }}>
           {load && <h1>Loading........................</h1>}
           {!load && <Products products={data} />}
+         
         </div>
       </div>
     </>
   );
+
+  
 };
 
 export default FetchData;

@@ -1,20 +1,20 @@
 import Navbar from "./components/Navbar";
-import Section from "./Section";
 import FetchData from "./components/FetchData";
-// import SearchItems from "./components/SearchItems";
-import Back from "./Back";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   createBrowserRouter,
   RouterProvider,
+
 } from "react-router-dom";
-import CategoriesList from "./components/CategoriesList";
+
 import Categories from "./views/Categories"
 import { loadercatgories } from "./components/CategoriesPage";
 import CatgeoriesPage from "./components/CategoriesPage";
 import SearchItems from "./components/SearchItems";
-
-
+// import CheckMore from "./components/CheckMore";
+import { loadercheckmore } from "./views/CheckMorePage";
+import CheckMorePage from "./views/CheckMorePage"
 
 
 
@@ -46,7 +46,13 @@ const router = createBrowserRouter([
         path: "/categories/:categories",
         element: <CatgeoriesPage/>,
         loader: loadercatgories
-      }
+      },
+      
+        {
+          path: "/checkmore/:id",
+          element: <CheckMorePage/>,
+          loader: loadercheckmore
+          }
     ]
   },
 ]);

@@ -15,6 +15,8 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { Outlet, Link } from "react-router-dom";
 import SearchItems from "./SearchItems";
 import { useState } from "react";
+
+
 const search =  <Link href="/search">Search</Link>
 const pages = [search, "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];

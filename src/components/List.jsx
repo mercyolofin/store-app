@@ -49,9 +49,9 @@ function List({ list }) {
 
                         </CardActionArea>
                         <CardActions>
-                            <a size="small" to={`/products/${item.id}`} color="primary">
+                            <Link size="small" to={`/products/${item.id}`} color="primary">
                                 more
-                            </a>
+                            </Link>
                             
                         </CardActions>
                     </Card>
