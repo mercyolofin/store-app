@@ -33,4 +33,4 @@ export async function loadercatgories({ params }) {
     mydata.push(data.products)
     return  mydata
 }
-export default CatgeoriesPage
+export default CatgeoriesPage;

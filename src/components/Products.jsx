@@ -11,7 +11,7 @@ const Products = ({ products }) => {
   return (
     <>
       
-     <div style={{marginLeft:'20px',  marginRight:'20px'}}>
+     <div style={{marginLeft:'70px',  marginRight:'20px'}}>
      <div className=" row">
         {products.map((item, index) => {
           return (

@@ -1,15 +1,4 @@
-// function CheckMore ({check}) {
-//     return(
-//         <div>
-//             {check.map((item, index )=>  {
-//                 return(
-//                     <div key={index}>
-//                         <p>{item.description}</p>
-//                     </div>
-//                 )
-//             })}     </div>
-//     )
-// }
+
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Container, Typography } from "@mui/material";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';

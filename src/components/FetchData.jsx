@@ -13,7 +13,7 @@ const FetchData = () => {
     }
     const result = await response.json();
     setData(result.products);
-    setLoad(false);
+      setLoad(false);
     console.log(result.products);
   };
   useEffect(() => {
