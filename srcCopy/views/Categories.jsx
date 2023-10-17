@@ -1,4 +1,4 @@
-import List from "../components/List";
+import  List  from "../components/List";
 import { useState, useEffect } from "react";
 import { Circles } from "react-loader-spinner";
 import CategoriesList from "../components/CategoriesList";
@@ -30,9 +30,9 @@ function Categories() {
         fetchproducts()
     }, []);
     return (
-        <div className="container ">
+        <div className="container ">   
             {loader && <h2>Loading categories.......</h2>}
-            {!loader && <CategoriesList categories={data} />}
+            {!loader && <CategoriesList categories={ data} />}
         </div>
     )
 }

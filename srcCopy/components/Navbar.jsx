@@ -17,21 +17,12 @@ import SearchItems from "./SearchItems";
 import { useState } from "react";
 
 
-
-const pages = [
-  {
-    id: 1,
-    link: "search"
-  },
-  {
-    id: 2,
-    link: "categories"
-  }
-];
+const search =  <Link href="/search">Search</Link>
+const pages = [search, "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
-  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElNav, setAnchorElNav] =useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null)
 
   const handleOpenNavMenu = (event) => {
@@ -70,7 +61,7 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              <Link style={{ textDecoration: "none", color: "white", fontSize: "20px" }}>Mercy's Stores</Link>
+              <Link style={{textDecoration:"none", color:"white" , fontSize:"20px"}}>Mercy's Stores</Link>
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -102,12 +93,12 @@ function Navbar() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                    <Link  style={{ textDecoration: "none", color: "", fontSize: "24px" }} textAlign="center  h-3" to={`/${page.link}`}>{page.link}</Link>
+                {/* {pages.map((page) => (
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
-                ))}
-               
+                ))} */}
+                <Link href="/search">Search</Link>
               </Menu>
             </Box>
             <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -127,8 +118,8 @@ function Navbar() {
                 textDecoration: "none",
               }}
             >
-              Mercy's Store
-
+             Mercy's Store
+             
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {/* {pages.map((page) => (
@@ -141,9 +132,8 @@ function Navbar() {
                 </Button>
               ))} */}
               <div>
-               
-                <Link to="/search" style={{ textDecoration: "none", color: "white", fontSize: "20px" }}>Search</Link>
-                <Link to="/categories" style={{ textDecoration: "none", color: "white", fontSize: "20px", paddingLeft: "40px" }}>categories</Link>
+              <Link to="/search"  style={{textDecoration:"none", color:"white" , fontSize:"20px"}}>Search</Link>
+              <Link to="/categories" style={{textDecoration:"none", color:"white" , fontSize:"20px", paddingLeft:"40px"}}>categories</Link>
               </div>
             </Box>
 

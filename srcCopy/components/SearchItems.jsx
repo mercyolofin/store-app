@@ -45,7 +45,7 @@ function SearchItems() {
 
   return (
     <div className="container ">
-      <h1>Find any product</h1>
+      <h1>Search Item</h1>
 
       <div>
         <input

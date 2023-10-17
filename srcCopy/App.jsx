@@ -15,54 +15,54 @@ import SearchItems from "./components/SearchItems";
 // import CheckMore from "./components/CheckMore";
 import { loadercheckmore } from "./views/CheckMorePage";
 import CheckMorePage from "./views/CheckMorePage"
-import CatSingle, { loadersinglecatgorie } from "./views/CatSingle";
 
 
 
 
 const router = createBrowserRouter([
   {
-
+    
 
     path: "/",
-    element: <Navbar />,
+    element: <Navbar/>,
     children: [
       {
         index: true,
-        element: <FetchData />,
+        element: <FetchData/>,
       },
       // {  
       // path: "SearchItems",
       // element:<SearchItems/>
       // },
       {
-        path: "categories",
-        element: <Categories />
+      path: "categories",
+      element: <Categories/>
       },
       {
         path: "search",
-        element: <SearchItems />
-      },
+        element: <SearchItems/>
+        },
       {
         path: "/categories/:categories",
-        element: <CatgeoriesPage />,
-        loader: loadercatgories,
+        element: <CatgeoriesPage/>,
+        loader: loadercatgories
       },
-      {
-        path: "/checkmore/:id",
-        element: <CheckMorePage />,
-        loader: loadercheckmore
-      }
+      
+        {
+          path: "/checkmore/:id",
+          element: <CheckMorePage/>,
+          loader: loadercheckmore
+          }
     ]
   },
 ]);
 
 
 
-function App() {
+function App () {
   return (
     <div className="App">
-      <RouterProvider router={router} />
+       <RouterProvider router={router} />
     </div>
   )
 }

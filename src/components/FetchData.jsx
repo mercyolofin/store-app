@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Products from "./Products";
 import CheckMore from "./CheckMore";
+import { ProgressBar } from "react-loader-spinner";
+import Hero from "./Hero";
 const url = "https://dummyjson.com/products?limit=80";
 const FetchData = () => {
   const [load, setLoad] = useState(false);
@@ -13,7 +15,7 @@ const FetchData = () => {
     }
     const result = await response.json();
     setData(result.products);
-      setLoad(false);
+    setLoad(false);
     console.log(result.products);
   };
   useEffect(() => {
@@ -21,17 +23,33 @@ const FetchData = () => {
   }, []);
   return (
     <>
-      <div style={{ marginTop: "90px" }}>
-        <div style={{ margin: "auto", width: "100%" }}>
-          {load && <h1>Loading........................</h1>}
-          {!load && <Products products={data} />}
-         
+      <div style={{ margin: 'auto', width: '50%' }} className="mt-4">
+      <Hero/>
+    </div>
+
+      <div className="container ">
+        <div style={{ margin: 'auto', width: '100%' }}
+        // style={{ margin: "auto", width: "100%" }}
+        >
+          
+          {load && <div style={{ margin: 'auto', width: '20%' }}> <ProgressBar
+            height="80"
+            width="80"
+            ariaLabel="progress-bar-loading"
+            wrapperStyle={{}}
+            wrapperClass="progress-bar-wrapper"
+            borderColor='#F4442E'
+            barColor='#51E5FF'
+          /> </div>}
+
+          {!load && <div ><Products products={data} /></div>}
+
         </div>
       </div>
     </>
   );
 
-  
+
 };
 
 export default FetchData;

@@ -8,7 +8,7 @@ import {Link} from "react-router-dom"
 function List({ list }) {
     return (
         <div className="d-flex flex-wrap justify-content-space-around" >
-            {list.map((item, id) => {
+            {list.map((item, index) => {
                 return (
                     <Card sx={{ maxWidth: 245 }} key={item.id} className="m-4">
                         <CardActionArea>
@@ -48,7 +48,12 @@ function List({ list }) {
                             </CardContent>
 
                         </CardActionArea>
-                     
+                        <CardActions>
+                            <Link size="small" to={`/products/${item.id}`} color="primary">
+                                more
+                            </Link>
+                            
+                        </CardActions>
                     </Card>
                 )
             })}
